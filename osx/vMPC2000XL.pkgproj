@@ -247,11 +247,7 @@
 				</dict>
 			</array>
 			<key>NAME</key>
-<<<<<<< HEAD
 			<string>vMPC2000XL</string>
-=======
-			<string>vmpc-installer</string>
->>>>>>> 0dc7f26031ecd87e961b40a172707e34966a4046
 			<key>PAYLOAD_ONLY</key>
 			<false/>
 			<key>TREAT_MISSING_PRESENTATION_DOCUMENTS_AS_WARNING</key>
