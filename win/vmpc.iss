@@ -1,6 +1,6 @@
 [Setup]
 AppName=vmpc
-AppVersion=1.0
+AppVersion=1.1
 DefaultDirName={autopf}\vmpc
 DefaultGroupName=vmpc
 UninstallDisplayIcon={app}\vmpc.exe
@@ -12,11 +12,11 @@ OutputBaseFilename="vmpc-installer"
 ArchitecturesInstallIn64BitMode=x64
 
 [Files]
-Source: "../../vmpc-binaries/win64/vmpc.exe"; DestDir: "{app}"; Check: Is64BitInstallMode
-Source: "../../vmpc-binaries/win32/vmpc.exe"; DestDir: "{app}"; Check: not Is64BitInstallMode; Flags: solidbreak
+Source: "../../vmpc-binaries/win64/vmpc.exe"; DestDir: "{app}"; Check: Is64BitInstallMode; Flags: replacesameversion 
+Source: "../../vmpc-binaries/win32/vmpc.exe"; DestDir: "{app}"; Check: not Is64BitInstallMode; Flags: solidbreak replacesameversion
 
 Source: "../../vmpc-home-dir/vMPC/*"; DestDir: "{%USERPROFILE}/vMPC"; Flags: ignoreversion recursesubdirs
 
 [Icons]
-Name: "{group}\vMPC2000XL"; Filename: "{app}\vmpc.exe"
-Name: "{commondesktop}\vMPC2000XL"; Filename: "{app}\vmpc.exe"
+Name: "{group}\vMPC2000XL"; Filename: "{app}\vmpc.exe"; IconFilename: "{app}\vmpc.exe"
+Name: "{commondesktop}\vMPC2000XL"; Filename: "{app}\vmpc.exe"; IconFilename: "{app}\vmpc.exe"
