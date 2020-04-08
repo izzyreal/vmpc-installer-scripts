@@ -16,3 +16,7 @@ Source: "../../vmpc-binaries/win64/vmpc.exe"; DestDir: "{app}"; Check: Is64BitIn
 Source: "../../vmpc-binaries/win32/vmpc.exe"; DestDir: "{app}"; Check: not Is64BitInstallMode; Flags: solidbreak
 
 Source: "../../vmpc-home-dir/vMPC/*"; DestDir: "{%USERPROFILE}/vMPC"; Flags: ignoreversion recursesubdirs
+
+[Icons]
+Name: "{group}\vMPC2000XL"; Filename: "{app}\vmpc.exe"
+Name: "{commondesktop}\vMPC2000XL"; Filename: "{app}\vmpc.exe"
