@@ -1,6 +1,9 @@
 [Setup]
+
+#define VersionInExecutable GetFileVersion('../../vmpc-binaries/win64/vmpc.exe')
+
 AppName=vmpc
-AppVersion=1.1
+AppVersion=VersionInExecutable
 DefaultDirName={autopf}\vmpc
 DefaultGroupName=vmpc
 UninstallDisplayIcon={app}\vmpc.exe
