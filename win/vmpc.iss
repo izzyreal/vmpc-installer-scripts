@@ -15,8 +15,8 @@ OutputBaseFilename="vmpc-installer"
 ArchitecturesInstallIn64BitMode=x64
 
 [Files]
-Source: "../../vmpc-binaries/win64/vmpc.exe"; DestDir: "{app}"; Check: Is64BitInstallMode; Flags: replacesameversion 
-Source: "../../vmpc-binaries/win32/vmpc.exe"; DestDir: "{app}"; Check: not Is64BitInstallMode; Flags: solidbreak replacesameversion
+Source: "../../vmpc-binaries/win64/vmpc.exe"; DestDir: "{app}"; Check: Is64BitInstallMode; Flags: ignoreversion
+Source: "../../vmpc-binaries/win32/vmpc.exe"; DestDir: "{app}"; Check: not Is64BitInstallMode; Flags: solidbreak ignoreversion
 
 Source: "../../vmpc-home-dir/vMPC/*"; DestDir: "{%USERPROFILE}/vMPC"; Flags: ignoreversion recursesubdirs
 
