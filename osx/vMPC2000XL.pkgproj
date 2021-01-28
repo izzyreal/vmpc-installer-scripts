@@ -22,7 +22,7 @@
 							<array>
 								<dict>
 									<key>BUNDLE_CAN_DOWNGRADE</key>
-									<true/>
+									<false/>
 									<key>BUNDLE_POSTINSTALL_PATH</key>
 									<dict>
 										<key>PATH_TYPE</key>
@@ -38,7 +38,7 @@
 									<key>GID</key>
 									<integer>80</integer>
 									<key>PATH</key>
-									<string>../../vmpc-binaries/osx/vmpc.app</string>
+									<string>../../vmpc-binaries/osx/vmpc2000xl.app</string>
 									<key>PATH_TYPE</key>
 									<integer>1</integer>
 									<key>PERMISSIONS</key>
@@ -534,7 +534,7 @@
 				<key>USE_HFS+_COMPRESSION</key>
 				<false/>
 				<key>VERSION</key>
-				<string>0.2.0</string>
+				<string>0.3.0.0</string>
 			</dict>
 			<key>TYPE</key>
 			<integer>0</integer>
@@ -842,7 +842,7 @@
 				</dict>
 			</array>
 			<key>NAME</key>
-			<string>vmpc-installer</string>
+			<string>vmpc2000xl-installer</string>
 			<key>PAYLOAD_ONLY</key>
 			<false/>
 			<key>TREAT_MISSING_PRESENTATION_DOCUMENTS_AS_WARNING</key>
