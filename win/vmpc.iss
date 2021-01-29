@@ -4,6 +4,7 @@
 
 AppName=vMPC2000XL
 AppVersion={#VersionInExecutable}
+VersionInfoVersion={#VersionInExecutable}
 DefaultDirName={autopf}\vMPC2000XL
 DefaultGroupName=vMPC2000XL
 UninstallDisplayIcon={app}\vmpc2000xl.exe
