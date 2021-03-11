@@ -22,7 +22,7 @@
 							<array>
 								<dict>
 									<key>BUNDLE_CAN_DOWNGRADE</key>
-									<true/>
+									<false/>
 									<key>BUNDLE_POSTINSTALL_PATH</key>
 									<dict>
 										<key>PATH_TYPE</key>
@@ -38,7 +38,7 @@
 									<key>GID</key>
 									<integer>80</integer>
 									<key>PATH</key>
-									<string>../../vmpc-binaries/osx/vmpc.app</string>
+									<string>../../vmpc-binaries/osx/VMPC2000XL.app</string>
 									<key>PATH_TYPE</key>
 									<integer>1</integer>
 									<key>PERMISSIONS</key>
@@ -518,11 +518,11 @@
 				<key>FOLLOW_SYMBOLIC_LINKS</key>
 				<false/>
 				<key>IDENTIFIER</key>
-				<string>nl.izmar.vMPC2000XL</string>
+				<string>nl.izmar.vmpc2000xl</string>
 				<key>LOCATION</key>
 				<integer>0</integer>
 				<key>NAME</key>
-				<string>vMPC2000XL</string>
+				<string>VMPC2000XL</string>
 				<key>OVERWRITE_PERMISSIONS</key>
 				<false/>
 				<key>PAYLOAD_SIZE</key>
@@ -534,7 +534,7 @@
 				<key>USE_HFS+_COMPRESSION</key>
 				<false/>
 				<key>VERSION</key>
-				<string>0.2.0</string>
+				<string>0.3.1</string>
 			</dict>
 			<key>TYPE</key>
 			<integer>0</integer>
@@ -648,7 +648,7 @@
 						<key>LANGUAGE</key>
 						<string>English</string>
 						<key>VALUE</key>
-						<string>vMPC2000XL</string>
+						<string>VMPC2000XL 0.3.1</string>
 					</dict>
 				</array>
 			</dict>
@@ -842,7 +842,7 @@
 				</dict>
 			</array>
 			<key>NAME</key>
-			<string>vmpc-installer</string>
+			<string>VMPC2000XL-Installer-Intel-M1</string>
 			<key>PAYLOAD_ONLY</key>
 			<false/>
 			<key>TREAT_MISSING_PRESENTATION_DOCUMENTS_AS_WARNING</key>
