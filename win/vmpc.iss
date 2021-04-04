@@ -19,7 +19,7 @@ ArchitecturesInstallIn64BitMode=x64
 Source: "../../vmpc-binaries/win64/VMPC2000XL.exe"; DestDir: "{app}"; Check: Is64BitInstallMode; Flags: ignoreversion
 Source: "../../vmpc-binaries/win32/VMPC2000XL.exe"; DestDir: "{app}"; Check: not Is64BitInstallMode; Flags: solidbreak ignoreversion
 
-Source: "../../vmpc-home-dir/vMPC/*"; DestDir: "{%USERPROFILE}/vMPC"; Flags: ignoreversion recursesubdirs
+Source: "../../vmpc-workspace/mpc/demo_data/*"; DestDir: "{userappdata}/VMPC2000XL/DemoData"; Flags: ignoreversion recursesubdirs
 
 [Icons]
 Name: "{group}\VMPC2000XL"; Filename: "{app}\VMPC2000XL.exe"; IconFilename: "{app}\VMPC2000XL.exe"
