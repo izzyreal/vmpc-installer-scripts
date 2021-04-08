@@ -24,7 +24,8 @@ Name: standalone; Description: "Standalone"; Types: custom
 Name: vst3; Description: "VST3"; Types: custom
 
 [Tasks]
-Name: remove_previous_user_data; Description: "Remove previous user data"; Flags: unchecked; Check: PreviousUserDataExists
+Name: remove_previous_user_data;   Description: "Remove previous user data";   Flags: unchecked; Check: PreviousUserDataExists
+Name: remove_previous_application; Description: "Remove previous application"; Flags: unchecked; Check: PreviousApplicationExists
 
 [Files]
 Source: "../../vmpc-binaries/win64/VMPC2000XL.exe"; DestDir: "{app}"; Check: Is64BitInstallMode; Flags: ignoreversion; Components: standalone
@@ -42,11 +43,15 @@ Name: "{commondesktop}\VMPC2000XL"; Filename: "{app}\VMPC2000XL.exe"; IconFilena
 [Code]
 
 function PreviousUserDataExists: Boolean;
-begin
-  Result := False;
-   if (DirExists(GetEnv('USERPROFILE') + '\vMPC\Stores\MPC2000XL')) then
-  begin
-    Result := True;
+begin Result := False; if (DirExists(GetEnv('USERPROFILE') + '\vMPC\Stores\MPC2000XL')) then begin Result := True; end; end;
+
+function PreviousApplicationExists: Boolean;
+begin Result := False;
+  if Is64BitInstallMode then begin
+    if (DirExists('C:/Program Files/vMPC')) then begin Result := True; end
+    else begin
+      if (DirExists('C:/Program Files (x86)/vMPC')) then begin Result := True; end;
+    end;
   end;
 end;
 
@@ -54,11 +59,19 @@ procedure CurStepChanged(CurStep: TSetupStep);
 begin
   if CurStep = ssPostInstall then
   begin
-    
+
     if (CompareText(WizardSelectedTasks(False), 'remove_previous_user_data') = 0) then
     begin
       DelTree(GetEnv('USERPROFILE') + '\vMPC', True, True, True)
     end;
 
-  end;
+    if (CompareText(WizardSelectedTasks(False), 'remove_previous_application') = 0) then
+    begin
+      if Is64BitInstallMode then begin
+        DelTree('C:/Program Files/vMPC', True, True, True) end
+      else begin
+        DelTree('C:/Program Files (x86)/vMPC', True, true, True)
+        end;
+      end;
+    end;
 end;
