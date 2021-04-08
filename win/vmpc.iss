@@ -24,10 +24,7 @@ Name: standalone; Description: "Standalone"; Types: custom
 Name: vst3; Description: "VST3"; Types: custom
 
 [Tasks]
-Name: import_previous_user_data; Description: "Import previous user data (APS, SND, etc.)"; Check: PreviousUserDataExists
-Name: import_previous_keyboard_mapping; Description: "Import previous keyboard mapping"; Check: PreviousKeyboardMappingExists
-Name: import_previous_nvram; Description: "Import previous NVRAM (USER defaults)"; Check: PreviousNvramExists
-Name: import_previous_vmpc_specific; Description: "Import previous VMPC specific config"; Check: PreviousVmpcSpecificExists
+Name: import_previous_user_data; Description: "Import previous user data (APS, SND, etc.)"; Flags: unchecked; Check: PreviousUserDataExists
 Name: remove_previous_user_data;   Description: "Remove previous user data";   Flags: unchecked; Check: PreviousUserDataExists
 Name: remove_previous_application; Description: "Remove previous application"; Flags: unchecked; Check: PreviousApplicationExists
 
@@ -47,7 +44,7 @@ Name: "{commondesktop}\VMPC2000XL"; Filename: "{app}\VMPC2000XL.exe"; IconFilena
 [Code]
 
 function PreviousUserDataExists: Boolean;
-begin Result := False; if (DirExists(GetEnv('USERPROFILE') + '/vMPC/Stores/MPC2000XL')) then begin Result := True; end; end;
+begin Result := False; if (DirExists(GetEnv('USERPROFILE') + '\vMPC\Stores\MPC2000XL')) then begin Result := True; end; end;
 
 function PreviousKeyboardMappingExists: Boolean;
 begin Result := False; if (FileExists(GetEnv('USERPROFILE') + '/vMPC/resources/keys.txt')) then begin Result := True; end; end;
@@ -121,22 +118,16 @@ end;
 procedure CurStepChanged(CurStep: TSetupStep);
 begin
   if CurStep = ssPostInstall then
-  begin
-    Log('-------------------=============== Post install... =-==------')
-    if (CompareText(WizardSelectedTasks(False), 'import_previous_user_data') = 0) then
+  begin    
+    if (WizardIsTaskSelected('remove_previous_user_data')) then
     begin
-      Log('========================== Importing previous user data')
-      DirectoryCopy(GetEnv('USERPROFILE') + '/vMPC/Stores/MPC2000XL', GetEnv('USERPROFILE') + '/Documents/VMPC2000XL/Volumes')
+      Log('====================== Removing previous user data')
+      //DelTree(GetEnv('USERPROFILE') + '\vMPC', True, True, True)
     end;
 
-    if (CompareText(WizardSelectedTasks(False), 'remove_previous_user_data') = 0) then
+    if (WizardIsTaskSelected('remove_previous_application')) then
     begin
-      DelTree(GetEnv('USERPROFILE') + '/vMPC', True, True, True)
-    end;
-
-    if (CompareText(WizardSelectedTasks(False), 'remove_previous_application') = 0) then
-    begin
-      Log('===================== Removing previous user data')
+      Log('====================== Removing previous application')
       if Is64BitInstallMode then begin
         DelTree('C:/Program Files/vMPC', True, True, True) end
       else begin
