@@ -47,7 +47,7 @@ Name: "{commondesktop}\VMPC2000XL"; Filename: "{app}\VMPC2000XL.exe"; IconFilena
 [Code]
 
 function PreviousUserDataExists: Boolean;
-begin Result := False; if (DirExists(GetEnv('USERPROFILE') + '\vMPC\Stores\MPC2000XL')) then begin Result := True; end; end;
+begin Result := False; if (DirExists(GetEnv('USERPROFILE') + '/vMPC/Stores/MPC2000XL')) then begin Result := True; end; end;
 
 function PreviousKeyboardMappingExists: Boolean;
 begin Result := False; if (FileExists(GetEnv('USERPROFILE') + '/vMPC/resources/keys.txt')) then begin Result := True; end; end;
@@ -75,7 +75,7 @@ var
   DestFilePath: string;
 begin
   Log('------------------========================= Entering DirCopy...')
-  if FindFirst(SourcePath + '\*', FindRec) then
+  if FindFirst(SourcePath + '/*', FindRec) then
   begin
     try
       repeat
@@ -128,10 +128,28 @@ begin
       DirectoryCopy(GetEnv('USERPROFILE') + '/vMPC/Stores', GetEnv('USERPROFILE') + '/Documents/VMPC2000XL/Volumes')
     end;
 
+    if (WizardIsTaskSelected('import_previous_keyboard_mapping')) then
+    begin
+      Log('========================== Importing previous keyboard mapping')
+      FileCopy(GetEnv('USERPROFILE') + '/vMPC/resources/keys.txt', GetEnv('APPDATA') + '/VMPC2000XL/config/keys.txt', False)
+    end;
+
+    if (WizardIsTaskSelected('import_previous_nvram')) then
+    begin
+      Log('========================== Importing previous nvram')
+      DirectoryCopy(GetEnv('USERPROFILE') + '/vMPC/Stores', GetEnv('USERPROFILE') + '/Documents/VMPC2000XL/Volumes')
+    end;
+
+    if (WizardIsTaskSelected('import_previous_vmpc_specific')) then
+    begin
+      Log('========================== Importing previous VMPC specific settings')
+      DirectoryCopy(GetEnv('USERPROFILE') + '/vMPC/Stores', GetEnv('USERPROFILE') + '/Documents/VMPC2000XL/Volumes')
+    end;
+
     if (WizardIsTaskSelected('remove_previous_user_data')) then
     begin
       Log('====================== Removing previous user data')
-      //DelTree(GetEnv('USERPROFILE') + '\vMPC', True, True, True)
+      DelTree(GetEnv('USERPROFILE') + '/vMPC', True, True, True)
     end;
 
     if (WizardIsTaskSelected('remove_previous_application')) then
