@@ -24,7 +24,10 @@ Name: standalone; Description: "Standalone"; Types: custom
 Name: vst3; Description: "VST3"; Types: custom
 
 [Tasks]
-Name: import_previous_user_data; Description: "Import previous user data (APS, SND, etc.)"; Flags: unchecked; Check: PreviousUserDataExists
+Name: import_previous_user_data; Description: "Import previous user data (APS, SND, etc.)"; Check: PreviousUserDataExists
+Name: import_previous_keyboard_mapping; Description: "Import previous keyboard mapping"; Check: PreviousKeyboardMappingExists
+Name: import_previous_nvram; Description: "Import previous NVRAM (USER defaults)"; Check: PreviousNvramExists
+Name: import_previous_vmpc_specific; Description: "Import previous VMPC specific config"; Check: PreviousVmpcSpecificExists
 Name: remove_previous_user_data;   Description: "Remove previous user data";   Flags: unchecked; Check: PreviousUserDataExists
 Name: remove_previous_application; Description: "Remove previous application"; Flags: unchecked; Check: PreviousApplicationExists
 
@@ -93,7 +96,7 @@ begin
           end
             else
           begin
-            if DirExists(DestFilePath) or CreateDir(DestFilePath) then
+            if DirExists(DestFilePath) or ForceDirectories(DestFilePath) then
             begin
               Log(Format('Created %s', [DestFilePath]));
               DirectoryCopy(SourceFilePath, DestFilePath);
@@ -119,6 +122,12 @@ procedure CurStepChanged(CurStep: TSetupStep);
 begin
   if CurStep = ssPostInstall then
   begin    
+    if (WizardIsTaskSelected('import_previous_user_data')) then
+    begin
+      Log('========================== Importing previous user data')
+      DirectoryCopy(GetEnv('USERPROFILE') + '/vMPC/Stores', GetEnv('USERPROFILE') + '/Documents/VMPC2000XL/Volumes')
+    end;
+
     if (WizardIsTaskSelected('remove_previous_user_data')) then
     begin
       Log('====================== Removing previous user data')
