@@ -24,7 +24,7 @@ Name: standalone; Description: "Standalone"; Types: custom
 Name: vst3; Description: "VST3"; Types: custom
 
 [Tasks]
-Name: remove_previous_user_data; Description: "Remove previous user data"; Flags: unchecked; Check: Foo
+Name: remove_previous_user_data; Description: "Remove previous user data"; Flags: unchecked; Check: PreviousUserDataExists
 
 [Files]
 Source: "../../vmpc-binaries/win64/VMPC2000XL.exe"; DestDir: "{app}"; Check: Is64BitInstallMode; Flags: ignoreversion; Components: standalone
@@ -41,10 +41,14 @@ Name: "{commondesktop}\VMPC2000XL"; Filename: "{app}\VMPC2000XL.exe"; IconFilena
 
 [Code]
 
-function Foo: Boolean;
+function PreviousUserDataExists: Boolean;
 begin
-  Result := True;
- end;
+  Result := False;
+   if (DirExists(GetEnv('USERPROFILE') + '\vMPC\Stores\MPC2000XL')) then
+  begin
+    Result := True;
+  end;
+end;
 
 procedure CurStepChanged(CurStep: TSetupStep);
 begin
