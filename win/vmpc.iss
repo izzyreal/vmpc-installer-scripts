@@ -119,9 +119,16 @@ begin
 end;
 
 procedure CurStepChanged(CurStep: TSetupStep);
+var
+      BaseResourcesPath: string;
+      BaseConfigPath: string;
 begin
   if CurStep = ssPostInstall then
-  begin    
+  begin
+    
+    BaseResourcesPath := GetEnv('USERPROFILE') + '/vMPC/resources/'
+    BaseConfigPath := GetEnv('APPDATA') + '/VMPC2000XL/config/'
+  
     if (WizardIsTaskSelected('import_previous_user_data')) then
     begin
       Log('========================== Importing previous user data')
@@ -131,19 +138,19 @@ begin
     if (WizardIsTaskSelected('import_previous_keyboard_mapping')) then
     begin
       Log('========================== Importing previous keyboard mapping')
-      FileCopy(GetEnv('USERPROFILE') + '/vMPC/resources/keys.txt', GetEnv('APPDATA') + '/VMPC2000XL/config/keys.txt', False)
+      FileCopy(BaseResourcesPath + 'keys.txt', BaseConfigPath + 'keys.txt', False)
     end;
 
     if (WizardIsTaskSelected('import_previous_nvram')) then
     begin
       Log('========================== Importing previous nvram')
-      DirectoryCopy(GetEnv('USERPROFILE') + '/vMPC/Stores', GetEnv('USERPROFILE') + '/Documents/VMPC2000XL/Volumes')
+      FileCopy(BaseResourcesPath + 'nvram.vmp', BaseConfigPath + 'nvram.vmp', False)
     end;
 
     if (WizardIsTaskSelected('import_previous_vmpc_specific')) then
     begin
       Log('========================== Importing previous VMPC specific settings')
-      DirectoryCopy(GetEnv('USERPROFILE') + '/vMPC/Stores', GetEnv('USERPROFILE') + '/Documents/VMPC2000XL/Volumes')
+      FileCopy(BaseResourcesPath + 'vmpc-specific.ini', BaseConfigPath + 'vmpc-specific.ini', False)
     end;
 
     if (WizardIsTaskSelected('remove_previous_user_data')) then
