@@ -26,19 +26,19 @@
 									<key>BUNDLE_POSTINSTALL_PATH</key>
 									<dict>
 										<key>PATH_TYPE</key>
-										<integer>0</integer>
+										<integer>1</integer>
 									</dict>
 									<key>BUNDLE_PREINSTALL_PATH</key>
 									<dict>
 										<key>PATH_TYPE</key>
-										<integer>0</integer>
+										<integer>1</integer>
 									</dict>
 									<key>CHILDREN</key>
 									<array/>
 									<key>GID</key>
 									<integer>80</integer>
 									<key>PATH</key>
-									<string>../../vmpc-binaries/osx/VMPC2000XL.app</string>
+									<string>../../vmpc-workspace/vmpc-juce/build/vmpc2000xl_artefacts/Release/Standalone/VMPC2000XL.app</string>
 									<key>PATH_TYPE</key>
 									<integer>1</integer>
 									<key>PERMISSIONS</key>
@@ -566,7 +566,7 @@
 				<key>USE_HFS+_COMPRESSION</key>
 				<false/>
 				<key>VERSION</key>
-				<string>0.3.1</string>
+				<string>0.4.0.0</string>
 			</dict>
 			<key>TYPE</key>
 			<integer>0</integer>
@@ -636,19 +636,19 @@
 															<key>BUNDLE_POSTINSTALL_PATH</key>
 															<dict>
 																<key>PATH_TYPE</key>
-																<integer>0</integer>
+																<integer>1</integer>
 															</dict>
 															<key>BUNDLE_PREINSTALL_PATH</key>
 															<dict>
 																<key>PATH_TYPE</key>
-																<integer>0</integer>
+																<integer>1</integer>
 															</dict>
 															<key>CHILDREN</key>
 															<array/>
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>../../vmpc-binaries/osx/VMPC2000XL.vst3</string>
+															<string>../../vmpc-workspace/vmpc-juce/build/vmpc2000xl_artefacts/Release/VST3/VMPC2000XL.vst3</string>
 															<key>PATH_TYPE</key>
 															<integer>1</integer>
 															<key>PERMISSIONS</key>
@@ -1103,7 +1103,7 @@
 				<key>USE_HFS+_COMPRESSION</key>
 				<false/>
 				<key>VERSION</key>
-				<string>0.3.1</string>
+				<string>0.4.0.0</string>
 			</dict>
 			<key>TYPE</key>
 			<integer>0</integer>
@@ -1173,21 +1173,21 @@
 															<key>BUNDLE_POSTINSTALL_PATH</key>
 															<dict>
 																<key>PATH_TYPE</key>
-																<integer>0</integer>
+																<integer>1</integer>
 															</dict>
 															<key>BUNDLE_PREINSTALL_PATH</key>
 															<dict>
 																<key>PATH_TYPE</key>
-																<integer>0</integer>
+																<integer>1</integer>
 															</dict>
 															<key>CHILDREN</key>
 															<array/>
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>/Users/izmar/git/vmpc-binaries/osx/VMPC2000XL.component</string>
+															<string>../../vmpc-workspace/vmpc-juce/build/vmpc2000xl_artefacts/Release/AU/VMPC2000XL.component</string>
 															<key>PATH_TYPE</key>
-															<integer>0</integer>
+															<integer>1</integer>
 															<key>PERMISSIONS</key>
 															<integer>493</integer>
 															<key>TYPE</key>
@@ -1655,7 +1655,7 @@
 				<key>USE_HFS+_COMPRESSION</key>
 				<false/>
 				<key>VERSION</key>
-				<string>0.3.1</string>
+				<string>0.4.0.0</string>
 			</dict>
 			<key>TYPE</key>
 			<integer>0</integer>
@@ -3006,7 +3006,7 @@
 						<key>LANGUAGE</key>
 						<string>English</string>
 						<key>VALUE</key>
-						<string>VMPC2000XL 0.3.1</string>
+						<string>VMPC2000XL 0.4.0.0</string>
 					</dict>
 				</array>
 			</dict>
