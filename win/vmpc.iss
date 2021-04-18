@@ -1,6 +1,6 @@
 [Setup]
 
-#define VersionInExecutable GetFileVersion('../../vmpc-binaries/win64/VMPC2000XL.exe')
+#define VersionInExecutable GetFileVersion('../../vmpc-workspace/vmpc-juce/build/vmpc2000xl_artefacts/Release/Standalone/VMPC2000XL.exe')
 
 AppName=VMPC2000XL
 AppVersion={#VersionInExecutable}
@@ -32,11 +32,11 @@ Name: remove_previous_user_data;   Description: "Remove previous user data";   F
 Name: remove_previous_application; Description: "Remove previous application"; Flags: unchecked; Check: PreviousApplicationExists
 
 [Files]
-Source: "../../vmpc-binaries/win64/VMPC2000XL.exe"; DestDir: "{app}"; Check: Is64BitInstallMode; Flags: ignoreversion; Components: standalone
-Source: "../../vmpc-binaries/win32/VMPC2000XL.exe"; DestDir: "{app}"; Check: not Is64BitInstallMode; Flags: ignoreversion; Components: standalone
+Source: "../../vmpc-workspace/vmpc-juce/build/vmpc2000xl_artefacts/Release/Standalone/VMPC2000XL.exe"; DestDir: "{app}"; Check: Is64BitInstallMode; Flags: ignoreversion; Components: standalone
+Source: "../../vmpc-workspace-32/vmpc-juce/build/vmpc2000xl_artefacts/Release/Standalone/VMPC2000XL.exe"; DestDir: "{app}"; Check: not Is64BitInstallMode; Flags: ignoreversion; Components: standalone
 
-Source: "../../vmpc-binaries/win64/VMPC2000XL.vst3/*"; DestDir: "C:/Program Files/Common Files/VST3/VMPC2000XL.vst3"; Check: Is64BitInstallMode; Flags: ignoreversion recursesubdirs; Components: vst3
-Source: "../../vmpc-binaries/win32/VMPC2000XL.vst3/*"; DestDir: "C:/Program Files (x86)/Common Files/VST3/VMPC2000XL.vst3"; Check: not Is64BitInstallMode; Flags: ignoreversion recursesubdirs; Components: vst3
+Source: "../../vmpc-workspace/vmpc-juce/build/vmpc2000xl_artefacts/Release/VST3/VMPC2000XL.vst3/*"; DestDir: "C:/Program Files/Common Files/VST3/VMPC2000XL.vst3"; Check: Is64BitInstallMode; Flags: ignoreversion recursesubdirs; Components: vst3
+Source: "../../vmpc-workspace-32/vmpc-juce/build/vmpc2000xl_artefacts/Release/VST3/VMPC2000XL.vst3/*"; DestDir: "C:/Program Files (x86)/Common Files/VST3/VMPC2000XL.vst3"; Check: not Is64BitInstallMode; Flags: ignoreversion recursesubdirs; Components: vst3
 
 Source: "../../vmpc-workspace/mpc/demo_data/*"; DestDir: "{userappdata}/VMPC2000XL/DemoData"; Flags: ignoreversion recursesubdirs
 
