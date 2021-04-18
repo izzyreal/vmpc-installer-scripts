@@ -26,19 +26,19 @@
 									<key>BUNDLE_POSTINSTALL_PATH</key>
 									<dict>
 										<key>PATH_TYPE</key>
-										<integer>0</integer>
+										<integer>1</integer>
 									</dict>
 									<key>BUNDLE_PREINSTALL_PATH</key>
 									<dict>
 										<key>PATH_TYPE</key>
-										<integer>0</integer>
+										<integer>1</integer>
 									</dict>
 									<key>CHILDREN</key>
 									<array/>
 									<key>GID</key>
 									<integer>80</integer>
 									<key>PATH</key>
-									<string>../../vmpc-binaries/osx/VMPC2000XL.app</string>
+									<string>../../vmpc-workspace/vmpc-juce/build/vmpc2000xl_artefacts/Release/Standalone/VMPC2000XL.app</string>
 									<key>PATH_TYPE</key>
 									<integer>1</integer>
 									<key>PERMISSIONS</key>
@@ -566,7 +566,7 @@
 				<key>USE_HFS+_COMPRESSION</key>
 				<false/>
 				<key>VERSION</key>
-				<string>0.3.1</string>
+				<string>0.4.0.0</string>
 			</dict>
 			<key>TYPE</key>
 			<integer>0</integer>
@@ -636,19 +636,19 @@
 															<key>BUNDLE_POSTINSTALL_PATH</key>
 															<dict>
 																<key>PATH_TYPE</key>
-																<integer>0</integer>
+																<integer>1</integer>
 															</dict>
 															<key>BUNDLE_PREINSTALL_PATH</key>
 															<dict>
 																<key>PATH_TYPE</key>
-																<integer>0</integer>
+																<integer>1</integer>
 															</dict>
 															<key>CHILDREN</key>
 															<array/>
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>../../vmpc-binaries/osx/VMPC2000XL.vst3</string>
+															<string>../../vmpc-workspace/vmpc-juce/build/vmpc2000xl_artefacts/Release/VST3/VMPC2000XL.vst3</string>
 															<key>PATH_TYPE</key>
 															<integer>1</integer>
 															<key>PERMISSIONS</key>
@@ -1103,7 +1103,7 @@
 				<key>USE_HFS+_COMPRESSION</key>
 				<false/>
 				<key>VERSION</key>
-				<string>0.3.1</string>
+				<string>0.4.0.0</string>
 			</dict>
 			<key>TYPE</key>
 			<integer>0</integer>
@@ -1173,21 +1173,21 @@
 															<key>BUNDLE_POSTINSTALL_PATH</key>
 															<dict>
 																<key>PATH_TYPE</key>
-																<integer>0</integer>
+																<integer>1</integer>
 															</dict>
 															<key>BUNDLE_PREINSTALL_PATH</key>
 															<dict>
 																<key>PATH_TYPE</key>
-																<integer>0</integer>
+																<integer>1</integer>
 															</dict>
 															<key>CHILDREN</key>
 															<array/>
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>/Users/izmar/git/vmpc-binaries/osx/VMPC2000XL.component</string>
+															<string>../../vmpc-workspace/vmpc-juce/build/vmpc2000xl_artefacts/Release/AU/VMPC2000XL.component</string>
 															<key>PATH_TYPE</key>
-															<integer>0</integer>
+															<integer>1</integer>
 															<key>PERMISSIONS</key>
 															<integer>493</integer>
 															<key>TYPE</key>
@@ -1655,7 +1655,7 @@
 				<key>USE_HFS+_COMPRESSION</key>
 				<false/>
 				<key>VERSION</key>
-				<string>0.3.1</string>
+				<string>0.4.0.0</string>
 			</dict>
 			<key>TYPE</key>
 			<integer>0</integer>
@@ -2503,416 +2503,7 @@
 							</dict>
 							<dict>
 								<key>CHILDREN</key>
-								<array>
-									<dict>
-										<key>CHILDREN</key>
-										<array/>
-										<key>DESCRIPTION</key>
-										<array/>
-										<key>OPTIONS</key>
-										<dict>
-											<key>HIDDEN</key>
-											<false/>
-											<key>STATE</key>
-											<integer>1</integer>
-										</dict>
-										<key>PACKAGE_UUID</key>
-										<string>E207EB0C-DE59-43E5-A628-28D2436AB9F2</string>
-										<key>REQUIREMENTS</key>
-										<array>
-											<dict>
-												<key>BEHAVIOR</key>
-												<integer>1</integer>
-												<key>DICTIONARY</key>
-												<dict>
-													<key>IC_REQUIREMENT_SCRIPT_ARGUMENTS</key>
-													<array>
-														<dict>
-															<key>IC_REQUIREMENT_SCRIPT_ARGUMENT_STATE</key>
-															<true/>
-															<key>IC_REQUIREMENT_SCRIPT_ARGUMENT_VALUE</key>
-															<string>vMPC/Stores/MPC2000XL</string>
-														</dict>
-													</array>
-													<key>IC_REQUIREMENT_SCRIPT_COMPARATOR</key>
-													<integer>0</integer>
-													<key>IC_REQUIREMENT_SCRIPT_EMBED</key>
-													<true/>
-													<key>IC_REQUIREMENT_SCRIPT_PATH</key>
-													<dict>
-														<key>PATH</key>
-														<string>update/check-home.sh</string>
-														<key>PATH_TYPE</key>
-														<integer>1</integer>
-													</dict>
-													<key>IC_REQUIREMENT_SCRIPT_VALUE</key>
-													<integer>0</integer>
-												</dict>
-												<key>IC_REQUIREMENT_CHECK_TYPE</key>
-												<integer>-1</integer>
-												<key>IDENTIFIER</key>
-												<string>fr.whitebox.Packages.requirement.scripts</string>
-												<key>MESSAGE</key>
-												<array>
-													<dict>
-														<key>LANGUAGE</key>
-														<string>English</string>
-														<key>VALUE</key>
-														<string>/Users/&lt;you&gt;/vMPC/Stores/MPC2000XL does not exist</string>
-													</dict>
-												</array>
-												<key>NAME</key>
-												<string>~/vMPC/Stores/MPC2000XL must exist</string>
-												<key>STATE</key>
-												<true/>
-											</dict>
-										</array>
-										<key>TITLE</key>
-										<array/>
-										<key>TYPE</key>
-										<integer>0</integer>
-										<key>UUID</key>
-										<string>78C83956-04DF-40C1-A7FE-D3A6692E829E</string>
-									</dict>
-									<dict>
-										<key>CHILDREN</key>
-										<array/>
-										<key>DESCRIPTION</key>
-										<array/>
-										<key>OPTIONS</key>
-										<dict>
-											<key>HIDDEN</key>
-											<false/>
-											<key>STATE</key>
-											<integer>1</integer>
-										</dict>
-										<key>PACKAGE_UUID</key>
-										<string>75AD5638-6961-4CA4-AD21-6979E30F1D51</string>
-										<key>REQUIREMENTS</key>
-										<array>
-											<dict>
-												<key>BEHAVIOR</key>
-												<integer>1</integer>
-												<key>DICTIONARY</key>
-												<dict>
-													<key>IC_REQUIREMENT_SCRIPT_ARGUMENTS</key>
-													<array>
-														<dict>
-															<key>IC_REQUIREMENT_SCRIPT_ARGUMENT_STATE</key>
-															<true/>
-															<key>IC_REQUIREMENT_SCRIPT_ARGUMENT_VALUE</key>
-															<string>vMPC/resources/keys.txt</string>
-														</dict>
-													</array>
-													<key>IC_REQUIREMENT_SCRIPT_COMPARATOR</key>
-													<integer>0</integer>
-													<key>IC_REQUIREMENT_SCRIPT_EMBED</key>
-													<true/>
-													<key>IC_REQUIREMENT_SCRIPT_PATH</key>
-													<dict>
-														<key>PATH</key>
-														<string>update/check-home.sh</string>
-														<key>PATH_TYPE</key>
-														<integer>1</integer>
-													</dict>
-													<key>IC_REQUIREMENT_SCRIPT_VALUE</key>
-													<integer>0</integer>
-												</dict>
-												<key>IC_REQUIREMENT_CHECK_TYPE</key>
-												<integer>-1</integer>
-												<key>IDENTIFIER</key>
-												<string>fr.whitebox.Packages.requirement.scripts</string>
-												<key>MESSAGE</key>
-												<array>
-													<dict>
-														<key>LANGUAGE</key>
-														<string>English</string>
-														<key>VALUE</key>
-														<string>/Users/&lt;you&gt;/vMPC/resources/keys.txt does not exist</string>
-													</dict>
-												</array>
-												<key>NAME</key>
-												<string>~/vMPC/resources/keys.txt must exist</string>
-												<key>STATE</key>
-												<true/>
-											</dict>
-										</array>
-										<key>TITLE</key>
-										<array/>
-										<key>TYPE</key>
-										<integer>0</integer>
-										<key>UUID</key>
-										<string>40923174-5285-44B9-BDD3-7806C1588C64</string>
-									</dict>
-									<dict>
-										<key>CHILDREN</key>
-										<array/>
-										<key>DESCRIPTION</key>
-										<array/>
-										<key>OPTIONS</key>
-										<dict>
-											<key>HIDDEN</key>
-											<false/>
-											<key>STATE</key>
-											<integer>1</integer>
-										</dict>
-										<key>PACKAGE_UUID</key>
-										<string>E58DEE3A-AB8F-4AAE-8812-598ACB203223</string>
-										<key>REQUIREMENTS</key>
-										<array>
-											<dict>
-												<key>BEHAVIOR</key>
-												<integer>1</integer>
-												<key>DICTIONARY</key>
-												<dict>
-													<key>IC_REQUIREMENT_SCRIPT_ARGUMENTS</key>
-													<array>
-														<dict>
-															<key>IC_REQUIREMENT_SCRIPT_ARGUMENT_STATE</key>
-															<true/>
-															<key>IC_REQUIREMENT_SCRIPT_ARGUMENT_VALUE</key>
-															<string>vMPC/resources/nvram.vmp</string>
-														</dict>
-													</array>
-													<key>IC_REQUIREMENT_SCRIPT_COMPARATOR</key>
-													<integer>0</integer>
-													<key>IC_REQUIREMENT_SCRIPT_EMBED</key>
-													<true/>
-													<key>IC_REQUIREMENT_SCRIPT_PATH</key>
-													<dict>
-														<key>PATH</key>
-														<string>update/check-home.sh</string>
-														<key>PATH_TYPE</key>
-														<integer>1</integer>
-													</dict>
-													<key>IC_REQUIREMENT_SCRIPT_VALUE</key>
-													<integer>0</integer>
-												</dict>
-												<key>IC_REQUIREMENT_CHECK_TYPE</key>
-												<integer>-1</integer>
-												<key>IDENTIFIER</key>
-												<string>fr.whitebox.Packages.requirement.scripts</string>
-												<key>MESSAGE</key>
-												<array>
-													<dict>
-														<key>LANGUAGE</key>
-														<string>English</string>
-														<key>VALUE</key>
-														<string>/Users/&lt;you&gt;/vMPC/resources/nvram.vmp does not exist</string>
-													</dict>
-												</array>
-												<key>NAME</key>
-												<string>~/vMPC/resources/nvram.vmp must exist</string>
-												<key>STATE</key>
-												<true/>
-											</dict>
-										</array>
-										<key>TITLE</key>
-										<array/>
-										<key>TYPE</key>
-										<integer>0</integer>
-										<key>UUID</key>
-										<string>484A4D54-7DA6-4858-99B0-DC16331AAE9E</string>
-									</dict>
-									<dict>
-										<key>CHILDREN</key>
-										<array/>
-										<key>DESCRIPTION</key>
-										<array/>
-										<key>OPTIONS</key>
-										<dict>
-											<key>HIDDEN</key>
-											<false/>
-											<key>STATE</key>
-											<integer>1</integer>
-										</dict>
-										<key>PACKAGE_UUID</key>
-										<string>8483EDD6-2AE0-4929-990A-548C8EB0C820</string>
-										<key>REQUIREMENTS</key>
-										<array>
-											<dict>
-												<key>BEHAVIOR</key>
-												<integer>1</integer>
-												<key>DICTIONARY</key>
-												<dict>
-													<key>IC_REQUIREMENT_SCRIPT_ARGUMENTS</key>
-													<array>
-														<dict>
-															<key>IC_REQUIREMENT_SCRIPT_ARGUMENT_STATE</key>
-															<true/>
-															<key>IC_REQUIREMENT_SCRIPT_ARGUMENT_VALUE</key>
-															<string>vMPC/resources/vmpc-specific.ini</string>
-														</dict>
-													</array>
-													<key>IC_REQUIREMENT_SCRIPT_COMPARATOR</key>
-													<integer>0</integer>
-													<key>IC_REQUIREMENT_SCRIPT_EMBED</key>
-													<true/>
-													<key>IC_REQUIREMENT_SCRIPT_PATH</key>
-													<dict>
-														<key>PATH</key>
-														<string>update/check-home.sh</string>
-														<key>PATH_TYPE</key>
-														<integer>1</integer>
-													</dict>
-													<key>IC_REQUIREMENT_SCRIPT_VALUE</key>
-													<integer>0</integer>
-												</dict>
-												<key>IC_REQUIREMENT_CHECK_TYPE</key>
-												<integer>-1</integer>
-												<key>IDENTIFIER</key>
-												<string>fr.whitebox.Packages.requirement.scripts</string>
-												<key>MESSAGE</key>
-												<array>
-													<dict>
-														<key>LANGUAGE</key>
-														<string>English</string>
-														<key>VALUE</key>
-														<string>/Users/&lt;you&gt;/vMPC/resources/vmpc-specific.ini does not exist</string>
-													</dict>
-												</array>
-												<key>NAME</key>
-												<string>~/vMPC/resources/vmpc-specific.ini must exist</string>
-												<key>STATE</key>
-												<true/>
-											</dict>
-										</array>
-										<key>TITLE</key>
-										<array/>
-										<key>TYPE</key>
-										<integer>0</integer>
-										<key>UUID</key>
-										<string>1083EB7F-CF35-45E3-A11E-0244D8FBEC73</string>
-									</dict>
-									<dict>
-										<key>CHILDREN</key>
-										<array/>
-										<key>DESCRIPTION</key>
-										<array/>
-										<key>OPTIONS</key>
-										<dict>
-											<key>HIDDEN</key>
-											<false/>
-											<key>STATE</key>
-											<integer>1</integer>
-										</dict>
-										<key>PACKAGE_UUID</key>
-										<string>959C3B10-7160-478E-B88C-98A9D19D54CF</string>
-										<key>REQUIREMENTS</key>
-										<array>
-											<dict>
-												<key>BEHAVIOR</key>
-												<integer>1</integer>
-												<key>DICTIONARY</key>
-												<dict>
-													<key>IC_REQUIREMENT_FILES_CONDITION</key>
-													<integer>0</integer>
-													<key>IC_REQUIREMENT_FILES_DISK_TYPE</key>
-													<integer>0</integer>
-													<key>IC_REQUIREMENT_FILES_LIST</key>
-													<array>
-														<string>/Applications/vMPC.app</string>
-													</array>
-													<key>IC_REQUIREMENT_FILES_SELECTOR</key>
-													<integer>0</integer>
-												</dict>
-												<key>IC_REQUIREMENT_CHECK_TYPE</key>
-												<integer>-1</integer>
-												<key>IDENTIFIER</key>
-												<string>fr.whitebox.Packages.requirement.files</string>
-												<key>MESSAGE</key>
-												<array>
-													<dict>
-														<key>LANGUAGE</key>
-														<string>English</string>
-														<key>VALUE</key>
-														<string>No previous installation found</string>
-													</dict>
-												</array>
-												<key>NAME</key>
-												<string>vMPC.app must be installed</string>
-												<key>STATE</key>
-												<true/>
-											</dict>
-										</array>
-										<key>TITLE</key>
-										<array/>
-										<key>TYPE</key>
-										<integer>0</integer>
-										<key>UUID</key>
-										<string>EF087D0F-E65E-477A-9C99-607950CC0FD0</string>
-									</dict>
-									<dict>
-										<key>CHILDREN</key>
-										<array/>
-										<key>DESCRIPTION</key>
-										<array/>
-										<key>OPTIONS</key>
-										<dict>
-											<key>HIDDEN</key>
-											<false/>
-											<key>STATE</key>
-											<integer>2</integer>
-										</dict>
-										<key>PACKAGE_UUID</key>
-										<string>E4395DF6-7741-4349-9155-A13D8DB55DA7</string>
-										<key>REQUIREMENTS</key>
-										<array>
-											<dict>
-												<key>BEHAVIOR</key>
-												<integer>1</integer>
-												<key>DICTIONARY</key>
-												<dict>
-													<key>IC_REQUIREMENT_SCRIPT_ARGUMENTS</key>
-													<array>
-														<dict>
-															<key>IC_REQUIREMENT_SCRIPT_ARGUMENT_STATE</key>
-															<true/>
-															<key>IC_REQUIREMENT_SCRIPT_ARGUMENT_VALUE</key>
-															<string>vMPC/Stores/MPC2000XL</string>
-														</dict>
-													</array>
-													<key>IC_REQUIREMENT_SCRIPT_COMPARATOR</key>
-													<integer>0</integer>
-													<key>IC_REQUIREMENT_SCRIPT_EMBED</key>
-													<true/>
-													<key>IC_REQUIREMENT_SCRIPT_PATH</key>
-													<dict>
-														<key>PATH</key>
-														<string>update/check-home.sh</string>
-														<key>PATH_TYPE</key>
-														<integer>1</integer>
-													</dict>
-													<key>IC_REQUIREMENT_SCRIPT_VALUE</key>
-													<integer>0</integer>
-												</dict>
-												<key>IC_REQUIREMENT_CHECK_TYPE</key>
-												<integer>-1</integer>
-												<key>IDENTIFIER</key>
-												<string>fr.whitebox.Packages.requirement.scripts</string>
-												<key>MESSAGE</key>
-												<array>
-													<dict>
-														<key>LANGUAGE</key>
-														<string>English</string>
-														<key>VALUE</key>
-														<string>/Users/&lt;you&gt;/vMPC/Stores/MPC2000XL does not exist</string>
-													</dict>
-												</array>
-												<key>NAME</key>
-												<string>~/vMPC/Stores/MPC2000XL must exist</string>
-												<key>STATE</key>
-												<true/>
-											</dict>
-										</array>
-										<key>TITLE</key>
-										<array/>
-										<key>TYPE</key>
-										<integer>0</integer>
-										<key>UUID</key>
-										<string>CC2254D2-5074-4E35-BAFF-C7910842DB6C</string>
-									</dict>
-								</array>
+								<array/>
 								<key>DESCRIPTION</key>
 								<array/>
 								<key>OPTIONS</key>
@@ -2920,21 +2511,403 @@
 									<key>HIDDEN</key>
 									<false/>
 									<key>STATE</key>
-									<integer>4</integer>
+									<integer>1</integer>
 								</dict>
-								<key>TITLE</key>
+								<key>PACKAGE_UUID</key>
+								<string>E207EB0C-DE59-43E5-A628-28D2436AB9F2</string>
+								<key>REQUIREMENTS</key>
 								<array>
 									<dict>
-										<key>LANGUAGE</key>
-										<string>English</string>
-										<key>VALUE</key>
-										<string>Update/remove previous installation</string>
+										<key>BEHAVIOR</key>
+										<integer>0</integer>
+										<key>DICTIONARY</key>
+										<dict>
+											<key>IC_REQUIREMENT_SCRIPT_ARGUMENTS</key>
+											<array>
+												<dict>
+													<key>IC_REQUIREMENT_SCRIPT_ARGUMENT_STATE</key>
+													<true/>
+													<key>IC_REQUIREMENT_SCRIPT_ARGUMENT_VALUE</key>
+													<string>vMPC/Stores/MPC2000XL</string>
+												</dict>
+											</array>
+											<key>IC_REQUIREMENT_SCRIPT_COMPARATOR</key>
+											<integer>0</integer>
+											<key>IC_REQUIREMENT_SCRIPT_EMBED</key>
+											<true/>
+											<key>IC_REQUIREMENT_SCRIPT_PATH</key>
+											<dict>
+												<key>PATH</key>
+												<string>update/check-home.sh</string>
+												<key>PATH_TYPE</key>
+												<integer>1</integer>
+											</dict>
+											<key>IC_REQUIREMENT_SCRIPT_VALUE</key>
+											<integer>0</integer>
+										</dict>
+										<key>IC_REQUIREMENT_CHECK_TYPE</key>
+										<integer>-1</integer>
+										<key>IDENTIFIER</key>
+										<string>fr.whitebox.Packages.requirement.scripts</string>
+										<key>MESSAGE</key>
+										<array>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>English</string>
+												<key>VALUE</key>
+												<string>/Users/&lt;you&gt;/vMPC/Stores/MPC2000XL does not exist</string>
+											</dict>
+										</array>
+										<key>NAME</key>
+										<string>~/vMPC/Stores/MPC2000XL must exist</string>
+										<key>STATE</key>
+										<true/>
 									</dict>
 								</array>
+								<key>TITLE</key>
+								<array/>
 								<key>TYPE</key>
-								<integer>1</integer>
+								<integer>0</integer>
 								<key>UUID</key>
-								<string>F77198B6-FF01-4177-8EE4-1C13C40A6709</string>
+								<string>78C83956-04DF-40C1-A7FE-D3A6692E829E</string>
+							</dict>
+							<dict>
+								<key>CHILDREN</key>
+								<array/>
+								<key>DESCRIPTION</key>
+								<array/>
+								<key>OPTIONS</key>
+								<dict>
+									<key>HIDDEN</key>
+									<false/>
+									<key>STATE</key>
+									<integer>1</integer>
+								</dict>
+								<key>PACKAGE_UUID</key>
+								<string>75AD5638-6961-4CA4-AD21-6979E30F1D51</string>
+								<key>REQUIREMENTS</key>
+								<array>
+									<dict>
+										<key>BEHAVIOR</key>
+										<integer>0</integer>
+										<key>DICTIONARY</key>
+										<dict>
+											<key>IC_REQUIREMENT_SCRIPT_ARGUMENTS</key>
+											<array>
+												<dict>
+													<key>IC_REQUIREMENT_SCRIPT_ARGUMENT_STATE</key>
+													<true/>
+													<key>IC_REQUIREMENT_SCRIPT_ARGUMENT_VALUE</key>
+													<string>vMPC/resources/keys.txt</string>
+												</dict>
+											</array>
+											<key>IC_REQUIREMENT_SCRIPT_COMPARATOR</key>
+											<integer>0</integer>
+											<key>IC_REQUIREMENT_SCRIPT_EMBED</key>
+											<true/>
+											<key>IC_REQUIREMENT_SCRIPT_PATH</key>
+											<dict>
+												<key>PATH</key>
+												<string>update/check-home.sh</string>
+												<key>PATH_TYPE</key>
+												<integer>1</integer>
+											</dict>
+											<key>IC_REQUIREMENT_SCRIPT_VALUE</key>
+											<integer>0</integer>
+										</dict>
+										<key>IC_REQUIREMENT_CHECK_TYPE</key>
+										<integer>-1</integer>
+										<key>IDENTIFIER</key>
+										<string>fr.whitebox.Packages.requirement.scripts</string>
+										<key>MESSAGE</key>
+										<array>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>English</string>
+												<key>VALUE</key>
+												<string>/Users/&lt;you&gt;/vMPC/resources/keys.txt does not exist</string>
+											</dict>
+										</array>
+										<key>NAME</key>
+										<string>~/vMPC/resources/keys.txt must exist</string>
+										<key>STATE</key>
+										<true/>
+									</dict>
+								</array>
+								<key>TITLE</key>
+								<array/>
+								<key>TYPE</key>
+								<integer>0</integer>
+								<key>UUID</key>
+								<string>40923174-5285-44B9-BDD3-7806C1588C64</string>
+							</dict>
+							<dict>
+								<key>CHILDREN</key>
+								<array/>
+								<key>DESCRIPTION</key>
+								<array/>
+								<key>OPTIONS</key>
+								<dict>
+									<key>HIDDEN</key>
+									<false/>
+									<key>STATE</key>
+									<integer>1</integer>
+								</dict>
+								<key>PACKAGE_UUID</key>
+								<string>E58DEE3A-AB8F-4AAE-8812-598ACB203223</string>
+								<key>REQUIREMENTS</key>
+								<array>
+									<dict>
+										<key>BEHAVIOR</key>
+										<integer>0</integer>
+										<key>DICTIONARY</key>
+										<dict>
+											<key>IC_REQUIREMENT_SCRIPT_ARGUMENTS</key>
+											<array>
+												<dict>
+													<key>IC_REQUIREMENT_SCRIPT_ARGUMENT_STATE</key>
+													<true/>
+													<key>IC_REQUIREMENT_SCRIPT_ARGUMENT_VALUE</key>
+													<string>vMPC/resources/nvram.vmp</string>
+												</dict>
+											</array>
+											<key>IC_REQUIREMENT_SCRIPT_COMPARATOR</key>
+											<integer>0</integer>
+											<key>IC_REQUIREMENT_SCRIPT_EMBED</key>
+											<true/>
+											<key>IC_REQUIREMENT_SCRIPT_PATH</key>
+											<dict>
+												<key>PATH</key>
+												<string>update/check-home.sh</string>
+												<key>PATH_TYPE</key>
+												<integer>1</integer>
+											</dict>
+											<key>IC_REQUIREMENT_SCRIPT_VALUE</key>
+											<integer>0</integer>
+										</dict>
+										<key>IC_REQUIREMENT_CHECK_TYPE</key>
+										<integer>-1</integer>
+										<key>IDENTIFIER</key>
+										<string>fr.whitebox.Packages.requirement.scripts</string>
+										<key>MESSAGE</key>
+										<array>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>English</string>
+												<key>VALUE</key>
+												<string>/Users/&lt;you&gt;/vMPC/resources/nvram.vmp does not exist</string>
+											</dict>
+										</array>
+										<key>NAME</key>
+										<string>~/vMPC/resources/nvram.vmp must exist</string>
+										<key>STATE</key>
+										<true/>
+									</dict>
+								</array>
+								<key>TITLE</key>
+								<array/>
+								<key>TYPE</key>
+								<integer>0</integer>
+								<key>UUID</key>
+								<string>484A4D54-7DA6-4858-99B0-DC16331AAE9E</string>
+							</dict>
+							<dict>
+								<key>CHILDREN</key>
+								<array/>
+								<key>DESCRIPTION</key>
+								<array/>
+								<key>OPTIONS</key>
+								<dict>
+									<key>HIDDEN</key>
+									<false/>
+									<key>STATE</key>
+									<integer>1</integer>
+								</dict>
+								<key>PACKAGE_UUID</key>
+								<string>8483EDD6-2AE0-4929-990A-548C8EB0C820</string>
+								<key>REQUIREMENTS</key>
+								<array>
+									<dict>
+										<key>BEHAVIOR</key>
+										<integer>0</integer>
+										<key>DICTIONARY</key>
+										<dict>
+											<key>IC_REQUIREMENT_SCRIPT_ARGUMENTS</key>
+											<array>
+												<dict>
+													<key>IC_REQUIREMENT_SCRIPT_ARGUMENT_STATE</key>
+													<true/>
+													<key>IC_REQUIREMENT_SCRIPT_ARGUMENT_VALUE</key>
+													<string>vMPC/resources/vmpc-specific.ini</string>
+												</dict>
+											</array>
+											<key>IC_REQUIREMENT_SCRIPT_COMPARATOR</key>
+											<integer>0</integer>
+											<key>IC_REQUIREMENT_SCRIPT_EMBED</key>
+											<true/>
+											<key>IC_REQUIREMENT_SCRIPT_PATH</key>
+											<dict>
+												<key>PATH</key>
+												<string>update/check-home.sh</string>
+												<key>PATH_TYPE</key>
+												<integer>1</integer>
+											</dict>
+											<key>IC_REQUIREMENT_SCRIPT_VALUE</key>
+											<integer>0</integer>
+										</dict>
+										<key>IC_REQUIREMENT_CHECK_TYPE</key>
+										<integer>-1</integer>
+										<key>IDENTIFIER</key>
+										<string>fr.whitebox.Packages.requirement.scripts</string>
+										<key>MESSAGE</key>
+										<array>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>English</string>
+												<key>VALUE</key>
+												<string>/Users/&lt;you&gt;/vMPC/resources/vmpc-specific.ini does not exist</string>
+											</dict>
+										</array>
+										<key>NAME</key>
+										<string>~/vMPC/resources/vmpc-specific.ini must exist</string>
+										<key>STATE</key>
+										<true/>
+									</dict>
+								</array>
+								<key>TITLE</key>
+								<array/>
+								<key>TYPE</key>
+								<integer>0</integer>
+								<key>UUID</key>
+								<string>1083EB7F-CF35-45E3-A11E-0244D8FBEC73</string>
+							</dict>
+							<dict>
+								<key>CHILDREN</key>
+								<array/>
+								<key>DESCRIPTION</key>
+								<array/>
+								<key>OPTIONS</key>
+								<dict>
+									<key>HIDDEN</key>
+									<false/>
+									<key>STATE</key>
+									<integer>1</integer>
+								</dict>
+								<key>PACKAGE_UUID</key>
+								<string>959C3B10-7160-478E-B88C-98A9D19D54CF</string>
+								<key>REQUIREMENTS</key>
+								<array>
+									<dict>
+										<key>BEHAVIOR</key>
+										<integer>0</integer>
+										<key>DICTIONARY</key>
+										<dict>
+											<key>IC_REQUIREMENT_FILES_CONDITION</key>
+											<integer>0</integer>
+											<key>IC_REQUIREMENT_FILES_DISK_TYPE</key>
+											<integer>0</integer>
+											<key>IC_REQUIREMENT_FILES_LIST</key>
+											<array>
+												<string>/Applications/vMPC.app</string>
+											</array>
+											<key>IC_REQUIREMENT_FILES_SELECTOR</key>
+											<integer>0</integer>
+										</dict>
+										<key>IC_REQUIREMENT_CHECK_TYPE</key>
+										<integer>-1</integer>
+										<key>IDENTIFIER</key>
+										<string>fr.whitebox.Packages.requirement.files</string>
+										<key>MESSAGE</key>
+										<array>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>English</string>
+												<key>VALUE</key>
+												<string>No previous installation found</string>
+											</dict>
+										</array>
+										<key>NAME</key>
+										<string>vMPC.app must be installed</string>
+										<key>STATE</key>
+										<true/>
+									</dict>
+								</array>
+								<key>TITLE</key>
+								<array/>
+								<key>TYPE</key>
+								<integer>0</integer>
+								<key>UUID</key>
+								<string>EF087D0F-E65E-477A-9C99-607950CC0FD0</string>
+							</dict>
+							<dict>
+								<key>CHILDREN</key>
+								<array/>
+								<key>DESCRIPTION</key>
+								<array/>
+								<key>OPTIONS</key>
+								<dict>
+									<key>HIDDEN</key>
+									<false/>
+									<key>STATE</key>
+									<integer>2</integer>
+								</dict>
+								<key>PACKAGE_UUID</key>
+								<string>E4395DF6-7741-4349-9155-A13D8DB55DA7</string>
+								<key>REQUIREMENTS</key>
+								<array>
+									<dict>
+										<key>BEHAVIOR</key>
+										<integer>0</integer>
+										<key>DICTIONARY</key>
+										<dict>
+											<key>IC_REQUIREMENT_SCRIPT_ARGUMENTS</key>
+											<array>
+												<dict>
+													<key>IC_REQUIREMENT_SCRIPT_ARGUMENT_STATE</key>
+													<true/>
+													<key>IC_REQUIREMENT_SCRIPT_ARGUMENT_VALUE</key>
+													<string>vMPC/Stores/MPC2000XL</string>
+												</dict>
+											</array>
+											<key>IC_REQUIREMENT_SCRIPT_COMPARATOR</key>
+											<integer>0</integer>
+											<key>IC_REQUIREMENT_SCRIPT_EMBED</key>
+											<true/>
+											<key>IC_REQUIREMENT_SCRIPT_PATH</key>
+											<dict>
+												<key>PATH</key>
+												<string>update/check-home.sh</string>
+												<key>PATH_TYPE</key>
+												<integer>1</integer>
+											</dict>
+											<key>IC_REQUIREMENT_SCRIPT_VALUE</key>
+											<integer>0</integer>
+										</dict>
+										<key>IC_REQUIREMENT_CHECK_TYPE</key>
+										<integer>-1</integer>
+										<key>IDENTIFIER</key>
+										<string>fr.whitebox.Packages.requirement.scripts</string>
+										<key>MESSAGE</key>
+										<array>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>English</string>
+												<key>VALUE</key>
+												<string>/Users/&lt;you&gt;/vMPC/Stores/MPC2000XL does not exist</string>
+											</dict>
+										</array>
+										<key>NAME</key>
+										<string>~/vMPC/Stores/MPC2000XL must exist</string>
+										<key>STATE</key>
+										<true/>
+									</dict>
+								</array>
+								<key>TITLE</key>
+								<array/>
+								<key>TYPE</key>
+								<integer>0</integer>
+								<key>UUID</key>
+								<string>CC2254D2-5074-4E35-BAFF-C7910842DB6C</string>
 							</dict>
 						</array>
 						<key>REMOVED</key>
@@ -3033,7 +3006,7 @@
 						<key>LANGUAGE</key>
 						<string>English</string>
 						<key>VALUE</key>
-						<string>VMPC2000XL 0.3.1</string>
+						<string>VMPC2000XL 0.4.0.0</string>
 					</dict>
 				</array>
 			</dict>
