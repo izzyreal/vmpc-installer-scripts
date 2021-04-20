@@ -1,6 +1,6 @@
 #!/bin/sh
-
 readonly OLD_DATA_PATH=~/vMPC/Stores/MPC2000XL
+
 readonly NEW_DOC_PATH=~/Documents/VMPC2000XL
 readonly NEW_DATA_PARENT_PATH=~/Documents/VMPC2000XL/Volumes
 readonly NEW_DATA_PATH=~/Documents/VMPC2000XL/Volumes/MPC2000XL

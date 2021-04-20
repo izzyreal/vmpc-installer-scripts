@@ -1,5 +1,4 @@
 #!/bin/sh
-
 readonly DATA_AND_RESOURCES_PATH=~/vMPC
 
 # If the old data and resources path exists, recursively remove it
