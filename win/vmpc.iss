@@ -40,12 +40,14 @@ Source: "../../vmpc-workspace-32/vmpc-juce/build/vmpc2000xl_artefacts/Release/VS
 
 Source: "../../vmpc-workspace/mpc/demo_data/*"; DestDir: "{userappdata}/VMPC2000XL/DemoData"; Flags: ignoreversion recursesubdirs
 
+[Dirs]
+Name: "{userappdata}/VMPC2000XL/config"
+
 [Icons]
 Name: "{group}\VMPC2000XL"; Filename: "{app}\VMPC2000XL.exe"; IconFilename: "{app}\VMPC2000XL.exe"
 Name: "{commondesktop}\VMPC2000XL"; Filename: "{app}\VMPC2000XL.exe"; IconFilename: "{app}\VMPC2000XL.exe"
 
 [Code]
-
 function PreviousUserDataExists: Boolean;
 begin Result := False; if (DirExists(GetEnv('USERPROFILE') + '/vMPC/Stores/MPC2000XL')) then begin Result := True; end; end;
 
@@ -74,7 +76,6 @@ var
   SourceFilePath: string;
   DestFilePath: string;
 begin
-  Log('------------------========================= Entering DirCopy...')
   if FindFirst(SourcePath + '/*', FindRec) then
   begin
     try
@@ -129,6 +130,8 @@ begin
     BaseResourcesPath := GetEnv('USERPROFILE') + '/vMPC/resources/'
     BaseConfigPath := GetEnv('APPDATA') + '/VMPC2000XL/config/'
   
+
+
     if (WizardIsTaskSelected('import_previous_user_data')) then
     begin
       Log('========================== Importing previous user data')
