@@ -38,7 +38,7 @@
 									<key>GID</key>
 									<integer>80</integer>
 									<key>PATH</key>
-									<string>../../vmpc-workspace/vmpc-juce/build/vmpc2000xl_artefacts/Release/Standalone/VMPC2000XL.app</string>
+									<string>../binaries/Standalone/VMPC2000XL.app</string>
 									<key>PATH_TYPE</key>
 									<integer>1</integer>
 									<key>PERMISSIONS</key>
@@ -80,7 +80,7 @@
 															<key>GID</key>
 															<integer>80</integer>
 															<key>PATH</key>
-															<string>../../vmpc-workspace/mpc/demo_data/TEST1</string>
+															<string>../demo_data/TEST1</string>
 															<key>PATH_TYPE</key>
 															<integer>1</integer>
 															<key>PERMISSIONS</key>
@@ -96,7 +96,7 @@
 															<key>GID</key>
 															<integer>80</integer>
 															<key>PATH</key>
-															<string>../../vmpc-workspace/mpc/demo_data/TEST2</string>
+															<string>../demo_data/TEST2</string>
 															<key>PATH_TYPE</key>
 															<integer>1</integer>
 															<key>PERMISSIONS</key>
@@ -648,7 +648,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>../../vmpc-workspace/vmpc-juce/build/vmpc2000xl_artefacts/Release/VST3/VMPC2000XL.vst3</string>
+															<string>../binaries/VST3/VMPC2000XL.vst3</string>
 															<key>PATH_TYPE</key>
 															<integer>1</integer>
 															<key>PERMISSIONS</key>
@@ -1185,7 +1185,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>../../vmpc-workspace/vmpc-juce/build/vmpc2000xl_artefacts/Release/AU/VMPC2000XL.component</string>
+															<string>../binaries/AU/VMPC2000XL.component</string>
 															<key>PATH_TYPE</key>
 															<integer>1</integer>
 															<key>PERMISSIONS</key>
@@ -1672,7 +1672,7 @@
 				<key>POSTINSTALL_PATH</key>
 				<dict>
 					<key>PATH</key>
-					<string>update/remove-previous-application.sh</string>
+					<string>./update/remove-previous-application.sh</string>
 					<key>PATH_TYPE</key>
 					<integer>1</integer>
 				</dict>
@@ -1726,9 +1726,9 @@
 				<key>POSTINSTALL_PATH</key>
 				<dict>
 					<key>PATH</key>
-					<string>/Users/izmar/git/vmpc-installer-scripts/mac/update/remove-previous-user-data-and-resources.sh</string>
+					<string>./update/remove-previous-user-data-and-resources.sh</string>
 					<key>PATH_TYPE</key>
-					<integer>0</integer>
+					<integer>1</integer>
 				</dict>
 				<key>PREINSTALL_PATH</key>
 				<dict>
@@ -1785,7 +1785,7 @@
 				<key>PREINSTALL_PATH</key>
 				<dict>
 					<key>PATH</key>
-					<string>update/import-keyboard-mapping.sh</string>
+					<string>./update/import-keyboard-mapping.sh</string>
 					<key>PATH_TYPE</key>
 					<integer>1</integer>
 				</dict>
@@ -1839,7 +1839,7 @@
 				<key>PREINSTALL_PATH</key>
 				<dict>
 					<key>PATH</key>
-					<string>update/import-nvram.sh</string>
+					<string>./update/import-nvram.sh</string>
 					<key>PATH_TYPE</key>
 					<integer>1</integer>
 				</dict>
@@ -1893,7 +1893,7 @@
 				<key>PREINSTALL_PATH</key>
 				<dict>
 					<key>PATH</key>
-					<string>update/import-vmpc-specific.sh</string>
+					<string>./update/import-vmpc-specific.sh</string>
 					<key>PATH_TYPE</key>
 					<integer>1</integer>
 				</dict>
@@ -2368,7 +2368,7 @@
 				<key>PREINSTALL_PATH</key>
 				<dict>
 					<key>PATH</key>
-					<string>update/import-user-data.sh</string>
+					<string>./update/import-user-data.sh</string>
 					<key>PATH_TYPE</key>
 					<integer>1</integer>
 				</dict>
@@ -2538,7 +2538,7 @@
 											<key>IC_REQUIREMENT_SCRIPT_PATH</key>
 											<dict>
 												<key>PATH</key>
-												<string>update/check-home.sh</string>
+												<string>./update/check-home.sh</string>
 												<key>PATH_TYPE</key>
 												<integer>1</integer>
 											</dict>
@@ -2608,7 +2608,7 @@
 											<key>IC_REQUIREMENT_SCRIPT_PATH</key>
 											<dict>
 												<key>PATH</key>
-												<string>update/check-home.sh</string>
+												<string>./update/check-home.sh</string>
 												<key>PATH_TYPE</key>
 												<integer>1</integer>
 											</dict>
@@ -2678,7 +2678,7 @@
 											<key>IC_REQUIREMENT_SCRIPT_PATH</key>
 											<dict>
 												<key>PATH</key>
-												<string>update/check-home.sh</string>
+												<string>./update/check-home.sh</string>
 												<key>PATH_TYPE</key>
 												<integer>1</integer>
 											</dict>
@@ -2748,7 +2748,7 @@
 											<key>IC_REQUIREMENT_SCRIPT_PATH</key>
 											<dict>
 												<key>PATH</key>
-												<string>update/check-home.sh</string>
+												<string>./update/check-home.sh</string>
 												<key>PATH_TYPE</key>
 												<integer>1</integer>
 											</dict>
@@ -2876,7 +2876,7 @@
 											<key>IC_REQUIREMENT_SCRIPT_PATH</key>
 											<dict>
 												<key>PATH</key>
-												<string>update/check-home.sh</string>
+												<string>./update/check-home.sh</string>
 												<key>PATH_TYPE</key>
 												<integer>1</integer>
 											</dict>
