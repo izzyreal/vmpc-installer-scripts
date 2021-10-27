@@ -1,6 +1,6 @@
 [Setup]
 
-#define VersionInExecutable GetFileVersion('../../vmpc-workspace/vmpc-juce/build/vmpc2000xl_artefacts/Release/Standalone/VMPC2000XL.exe')
+#define VersionInExecutable GetEnv('VERSION')
 
 AppName=VMPC2000XL
 AppVersion={#VersionInExecutable}
