@@ -550,7 +550,7 @@
 				<key>FOLLOW_SYMBOLIC_LINKS</key>
 				<false/>
 				<key>IDENTIFIER</key>
-				<string>nl.izmar.vmpc2000xl.standalone</string>
+				<string>nl.izmar.vmpc2000xl</string>
 				<key>LOCATION</key>
 				<integer>0</integer>
 				<key>NAME</key>
