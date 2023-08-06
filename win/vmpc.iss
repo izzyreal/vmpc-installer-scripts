@@ -2,21 +2,18 @@
 #define Alt32BitVst3Path "../../vmpc-workspace-32/vmpc-juce/build/vmpc2000xl_artefacts/Release/VST3/VMPC2000XL.vst3/*"
 #define Alt64BitExecutablePath "..\..\vmpc-workspace\vmpc-juce\build\vmpc2000xl_artefacts\Release\Standalone/VMPC2000XL.exe"
 #define Alt64BitVst3Path "../../vmpc-workspace/vmpc-juce/build/vmpc2000xl_artefacts/Release/VST3/VMPC2000XL.vst3/*"   
-#define AltDemoDataPath "../demo_data/*"
 #define AltOutputDir "../../vmpc-binaries/installers"       
 
 #define _32BitExecutablePath GetEnv('32_BIT_EXECUTABLE_PATH')
 #define _32BitVst3Path GetEnv('32_BIT_VST3_PATH')
 #define _64BitExecutablePath GetEnv('64_BIT_EXECUTABLE_PATH')
 #define _64BitVst3Path GetEnv('64_BIT_VST3_PATH')     
-#define DemoDataPath GetEnv('DEMO_DATA_PATH')
 #define OutputDir GetEnv('OUTPUT_DIR')       
 
 #define Get64BitExecutablePath _64BitExecutablePath == "" ? Alt64BitExecutablePath : _64BitExecutablePath
 #define Get32BitExecutablePath _32BitExecutablePath == "" ? Alt32BitExecutablePath : _32BitExecutablePath
 #define Get64BitVst3Path _64BitVst3Path == "" ? Alt64BitVst3Path : _64BitVst3Path
 #define Get32BitVst3Path _32BitVst3Path == "" ? Alt32BitVst3Path : _32BitVst3Path
-#define GetDemoDataPath DemoDataPath == "" ? AltDemoDataPath : DemoDataPath
 #define GetOutputDir OutputDir == "" ? AltOutputDir : OutputDir
 
 #define ApplicationVersion GetVersionNumbersString(Get64BitExecutablePath)
@@ -50,6 +47,7 @@ Name: import_previous_nvram; Description: "Import previous NVRAM (USER defaults)
 Name: import_previous_vmpc_specific; Description: "Import previous VMPC specific config"; Check: PreviousVmpcSpecificExists
 Name: remove_previous_user_data;   Description: "Remove previous user data";   Flags: unchecked; Check: PreviousUserDataExists
 Name: remove_previous_application; Description: "Remove previous application"; Flags: unchecked; Check: PreviousApplicationExists
+Name: remove_obsolete_demodata; Description: "Remove obsolete demo beats from %appdata% (recommended)"; Flags: checked;
 
 [Files]
 Source: "{#SourcePath}{#Get64BitExecutablePath}"; DestDir: {app}; Check: Is64BitInstallMode; Flags: ignoreversion; Components: standalone
@@ -57,8 +55,6 @@ Source: "{#SourcePath}{#Get32BitExecutablePath}"; DestDir: {app}; Check: not Is6
 
 Source: "{#SourcePath}{#Get64BitVst3Path}"; DestDir: "C:/Program Files/Common Files/VST3/VMPC2000XL.vst3"; Check: Is64BitInstallMode; Flags: ignoreversion recursesubdirs; Components: vst3
 Source: "{#SourcePath}{#Get32BitVst3Path}"; DestDir: "C:/Program Files (x86)/Common Files/VST3/VMPC2000XL.vst3"; Check: not Is64BitInstallMode; Flags: ignoreversion recursesubdirs; Components: vst3
-
-Source: "{#SourcePath}{#GetDemoDataPath}"; DestDir: "{userappdata}/VMPC2000XL/DemoData"; Flags: ignoreversion recursesubdirs
 
 [Dirs]
 Name: "{userappdata}/VMPC2000XL/config"
@@ -190,6 +186,13 @@ begin
       else begin
         DelTree('C:/Program Files (x86)/vMPC', True, true, True)
         end;
+      end;
+    end;
+
+    if (WizardIsTaskSelected('remove_obsolete_demodata')) then
+    begin
+      Log('====================== Removing obsolete demo data')
+      DelTree(userappdata + 'DemoData', True, True, True)
       end;
     end;
 end;
