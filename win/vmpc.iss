@@ -47,7 +47,7 @@ Name: import_previous_nvram; Description: "Import previous NVRAM (USER defaults)
 Name: import_previous_vmpc_specific; Description: "Import previous VMPC specific config"; Check: PreviousVmpcSpecificExists
 Name: remove_previous_user_data;   Description: "Remove previous user data";   Flags: unchecked; Check: PreviousUserDataExists
 Name: remove_previous_application; Description: "Remove previous application"; Flags: unchecked; Check: PreviousApplicationExists
-Name: remove_obsolete_demodata; Description: "Remove obsolete demo beats from %appdata% (recommended)"; Flags: checked;
+Name: remove_obsolete_demodata; Description: "Remove obsolete demo beats from %appdata% (recommended)"
 
 [Files]
 Source: "{#SourcePath}{#Get64BitExecutablePath}"; DestDir: {app}; Check: Is64BitInstallMode; Flags: ignoreversion; Components: standalone
@@ -192,7 +192,7 @@ begin
     if (WizardIsTaskSelected('remove_obsolete_demodata')) then
     begin
       Log('====================== Removing obsolete demo data')
-      DelTree(userappdata + 'DemoData', True, True, True)
+      DelTree(ExpandConstant('{userappdata}/DemoData'), True, True, True)
       end;
     end;
 end;
