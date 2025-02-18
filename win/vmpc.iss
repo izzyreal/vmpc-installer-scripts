@@ -1,23 +1,11 @@
-#define Alt32BitExecutablePath "../../vmpc-workspace-32/vmpc-juce/build/vmpc2000xl_artefacts/Release/Standalone/VMPC2000XL.exe"
-#define Alt32BitVst3Path "../../vmpc-workspace-32/vmpc-juce/build/vmpc2000xl_artefacts/Release/VST3/VMPC2000XL.vst3/*"
-#define Alt64BitExecutablePath "..\..\vmpc-workspace\vmpc-juce\build\vmpc2000xl_artefacts\Release\Standalone/VMPC2000XL.exe"
-#define Alt64BitVst3Path "../../vmpc-workspace/vmpc-juce/build/vmpc2000xl_artefacts/Release/VST3/VMPC2000XL.vst3/*"   
-#define AltDemoDataPath "../demo_data/*"
-#define AltOutputDir "../../vmpc-binaries/installers"       
-
-#define _32BitExecutablePath GetEnv('32_BIT_EXECUTABLE_PATH')
-#define _32BitVst3Path GetEnv('32_BIT_VST3_PATH')
-#define _64BitExecutablePath GetEnv('64_BIT_EXECUTABLE_PATH')
-#define _64BitVst3Path GetEnv('64_BIT_VST3_PATH')     
-#define DemoDataPath GetEnv('DEMO_DATA_PATH')
-#define OutputDir GetEnv('OUTPUT_DIR')       
-
-#define Get64BitExecutablePath _64BitExecutablePath == "" ? Alt64BitExecutablePath : _64BitExecutablePath
-#define Get32BitExecutablePath _32BitExecutablePath == "" ? Alt32BitExecutablePath : _32BitExecutablePath
-#define Get64BitVst3Path _64BitVst3Path == "" ? Alt64BitVst3Path : _64BitVst3Path
-#define Get32BitVst3Path _32BitVst3Path == "" ? Alt32BitVst3Path : _32BitVst3Path
-#define GetDemoDataPath DemoDataPath == "" ? AltDemoDataPath : DemoDataPath
-#define GetOutputDir OutputDir == "" ? AltOutputDir : OutputDir
+#define Get32BitExecutablePath GetEnv('32_BIT_EXECUTABLE_PATH')
+#define Get64BitExecutablePath GetEnv('64_BIT_EXECUTABLE_PATH')
+#define Get32BitVst3Path GetEnv('32_BIT_VST3_PATH')
+#define Get64BitVst3Path GetEnv('64_BIT_VST3_PATH')
+#define Get32BitLv2Path GetEnv('32_BIT_LV2_PATH')
+#define Get64BitLv2Path GetEnv('64_BIT_LV2_PATH')
+#define GetDemoDataPath GetEnv('DEMO_DATA_PATH')
+#define GetOutputDir GetEnv('OUTPUT_DIR')
 
 #define ApplicationVersion GetVersionNumbersString(Get64BitExecutablePath)
 
@@ -42,6 +30,7 @@ Name: "custom"; Description: "Custom installation"; Flags: iscustom
 [Components]
 Name: standalone; Description: "Standalone"; Types: custom
 Name: vst3; Description: "VST3"; Types: custom
+Name: lv2; Description: "LV2"; Types: custom
 
 [Tasks]
 Name: import_previous_user_data; Description: "Import previous user data (APS, SND, etc.)"; Check: PreviousUserDataExists
@@ -58,6 +47,9 @@ Source: "{#SourcePath}{#Get32BitExecutablePath}"; DestDir: {app}; Check: not Is6
 
 Source: "{#SourcePath}{#Get64BitVst3Path}"; DestDir: "C:/Program Files/Common Files/VST3/VMPC2000XL.vst3"; Check: Is64BitInstallMode; Flags: ignoreversion recursesubdirs; Components: vst3
 Source: "{#SourcePath}{#Get32BitVst3Path}"; DestDir: "C:/Program Files (x86)/Common Files/VST3/VMPC2000XL.vst3"; Check: not Is64BitInstallMode; Flags: ignoreversion recursesubdirs; Components: vst3
+
+Source: "{#SourcePath}{#Get64BitLv2Path}"; DestDir: "C:/Program Files/Common Files/LV2/VMPC2000XL.lv2"; Check: Is64BitInstallMode; Flags: ignoreversion recursesubdirs; Components: lv2
+Source: "{#SourcePath}{#Get32BitLv2Path}"; DestDir: "C:/Program Files (x86)/Common Files/LV2/VMPC2000XL.lv2"; Check: not Is64BitInstallMode; Flags: ignoreversion recursesubdirs; Components: lv2
 
 Source: "{#SourcePath}{#GetDemoDataPath}"; DestDir: "{userappdata}/VMPC2000XL/DemoData"; Flags: ignoreversion recursesubdirs
 
