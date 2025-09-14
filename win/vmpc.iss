@@ -46,10 +46,10 @@ Source: "{#SourcePath}{#Get64BitExecutablePath}"; DestDir: {app}; Check: Is64Bit
 Source: "{#SourcePath}{#Get32BitExecutablePath}"; DestDir: {app}; Check: not Is64BitInstallMode; Flags: ignoreversion; Components: standalone
 
 Source: "{#SourcePath}{#Get64BitVst3Path}"; DestDir: "C:/Program Files/Common Files/VST3/VMPC2000XL.vst3"; Check: Is64BitInstallMode; Flags: ignoreversion recursesubdirs; Components: vst3
-Source: "{#SourcePath}{#Get32BitVst3Path}"; DestDir: "C:/Program Files (x86)/Common Files/VST3/VMPC2000XL.vst3"; Check: not Is64BitInstallMode; Flags: ignoreversion recursesubdirs; Components: vst3
+Source: "{#SourcePath}{#Get32BitVst3Path}"; DestDir: "C:/Program Files/Common Files/VST3/VMPC2000XL.vst3"; Check: not Is64BitInstallMode; Flags: ignoreversion recursesubdirs; Components: vst3
 
 Source: "{#SourcePath}{#Get64BitLv2Path}"; DestDir: "C:/Program Files/Common Files/LV2/VMPC2000XL.lv2"; Check: Is64BitInstallMode; Flags: ignoreversion recursesubdirs; Components: lv2
-Source: "{#SourcePath}{#Get32BitLv2Path}"; DestDir: "C:/Program Files (x86)/Common Files/LV2/VMPC2000XL.lv2"; Check: not Is64BitInstallMode; Flags: ignoreversion recursesubdirs; Components: lv2
+Source: "{#SourcePath}{#Get32BitLv2Path}"; DestDir: "C:/Program Files/Common Files/LV2/VMPC2000XL.lv2"; Check: not Is64BitInstallMode; Flags: ignoreversion recursesubdirs; Components: lv2
 
 Source: "{#SourcePath}{#GetDemoDataPath}"; DestDir: "{userappdata}/VMPC2000XL/DemoData"; Flags: ignoreversion recursesubdirs
 
@@ -132,6 +132,24 @@ begin
   end;
 end;
 
+procedure CleanupOldVst3Lv2Paths32Bit;
+begin
+  if not Is64BitInstallMode then
+  begin
+    if DirExists('C:/Program Files (x86)/Common Files/VST3/VMPC2000XL.vst3') then
+    begin
+      DelTree('C:/Program Files (x86)/Common Files/VST3/VMPC2000XL.vst3', True, True, True);
+      Log('Removed old VST3 from Program Files (x86)');
+    end;
+
+    if DirExists('C:/Program Files (x86)/Common Files/LV2/VMPC2000XL.lv2') then
+    begin
+      DelTree('C:/Program Files (x86)/Common Files/LV2/VMPC2000XL.lv2', True, True, True);
+      Log('Removed old LV2 from Program Files (x86)');
+    end;
+  end;
+end;
+
 procedure CurStepChanged(CurStep: TSetupStep);
 var
       BaseResourcesPath: string;
@@ -139,12 +157,11 @@ var
 begin
   if CurStep = ssPostInstall then
   begin
+    CleanupOldVst3Lv2Paths32Bit();
     
     BaseResourcesPath := GetEnv('USERPROFILE') + '/vMPC/resources/'
     BaseConfigPath := GetEnv('APPDATA') + '/VMPC2000XL/config/'
   
-
-
     if (WizardIsTaskSelected('import_previous_user_data')) then
     begin
       Log('========================== Importing previous user data')
@@ -186,3 +203,4 @@ begin
       end;
     end;
 end;
+
